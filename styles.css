@@ -430,7 +430,7 @@ body {
 
 .service-content h3 {
   font-family: "Cinzel", serif;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   color: #333;
   margin-bottom: 15px;
 }
@@ -439,6 +439,7 @@ body {
   color: #666;
   margin-bottom: 20px;
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .service-features {
@@ -451,6 +452,7 @@ body {
   margin-bottom: 8px;
   padding-left: 10px;
   position: relative;
+  font-size: 0.9rem;
 }
 
 .service-features li::before {
@@ -464,11 +466,12 @@ body {
   background: transparent;
   color: #333;
   border: 2px solid #333;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border-radius: 25px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .learn-more-btn:hover {
@@ -826,10 +829,10 @@ body {
 .form-group select,
 .form-group textarea {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   border: 2px solid #e9ecef;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   background: #fafafa;
 }
@@ -853,7 +856,7 @@ body {
 .radio-option {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 12px;
   border: 2px solid #e9ecef;
   border-radius: 10px;
   cursor: pointer;
@@ -910,7 +913,7 @@ body {
 }
 
 .option-icon {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .btn-submit {
@@ -1067,10 +1070,10 @@ body {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 15px;
+  padding: 12px;
   border: 2px solid #e9ecef;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   background: white;
 }
