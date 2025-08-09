@@ -16,7 +16,7 @@
      Google Fonts 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Satisfy&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
     
      Font Awesome Icons 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -231,7 +231,7 @@
                             <li>• Authentic Styling</li>
                             <li>• Cultural Coordination</li>
                         </ul>
-                        <button class="learn-more-btn green">Learn More →</button>
+                        <button class="learn-more-btn gold">Learn More →</button>
                     </div>
                 </div>
 
@@ -317,56 +317,80 @@
 
                 <div class="gallery-grid">
                     <div class="gallery-item" data-category="reception">
-                        <img src="images/gallery-1.jpg" alt="Elegant Table Setting">
-                        <div class="gallery-overlay">
-                            <h4>Elegant Table Setting</h4>
-                            <p>Beautiful centerpieces with golden accents</p>
-                            <span class="category-tag">Reception Styling</span>
+                        <div class="gallery-image-wrapper">
+                            <img src="images/gallery-1.jpg" alt="Elegant Table Setting">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h4>Elegant Table Setting</h4>
+                                    <p>Beautiful centerpieces with golden accents</p>
+                                    <span class="category-tag">Reception Styling</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="gallery-item" data-category="venue">
-                        <img src="images/gallery-2.jpg" alt="Venue Transformation">
-                        <div class="gallery-overlay">
-                            <h4>Venue Transformation</h4>
-                            <p>Complete setup with elegant chandeliers</p>
-                            <span class="category-tag">Full Venue Design</span>
+                        <div class="gallery-image-wrapper">
+                            <img src="images/gallery-2.jpg" alt="Venue Transformation">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h4>Venue Transformation</h4>
+                                    <p>Complete setup with elegant chandeliers</p>
+                                    <span class="category-tag">Full Venue Design</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="gallery-item" data-category="events">
-                        <img src="images/gallery-3.jpg" alt="Balloon Arch">
-                        <div class="gallery-overlay">
-                            <h4>Colorful Balloon Arch</h4>
-                            <p>Vibrant balloon decorations for celebrations</p>
-                            <span class="category-tag">Events Decor</span>
+                        <div class="gallery-image-wrapper">
+                            <img src="images/gallery-3.jpg" alt="Balloon Arch">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h4>Colorful Balloon Arch</h4>
+                                    <p>Vibrant balloon decorations for celebrations</p>
+                                    <span class="category-tag">Events Decor</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="gallery-item" data-category="cultural">
-                        <img src="images/gallery-4.jpg" alt="Traditional Setup">
-                        <div class="gallery-overlay">
-                            <h4>Traditional Wedding Setup</h4>
-                            <p>Authentic cultural decorations and styling</p>
-                            <span class="category-tag">Kuhingira & Kwanjula</span>
+                        <div class="gallery-image-wrapper">
+                            <img src="images/gallery-4.jpg" alt="Traditional Setup">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h4>Traditional Wedding Setup</h4>
+                                    <p>Authentic cultural decorations and styling</p>
+                                    <span class="category-tag">Kuhingira & Kwanjula</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="gallery-item" data-category="reception">
-                        <img src="images/gallery-5.jpg" alt="Romantic Dinner">
-                        <div class="gallery-overlay">
-                            <h4>Romantic Dinner Setup</h4>
-                            <p>Intimate candlelit dining experience</p>
-                            <span class="category-tag">Reception Styling</span>
+                        <div class="gallery-image-wrapper">
+                            <img src="images/gallery-5.jpg" alt="Romantic Dinner">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h4>Romantic Dinner Setup</h4>
+                                    <p>Intimate candlelit dining experience</p>
+                                    <span class="category-tag">Reception Styling</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="gallery-item" data-category="events">
-                        <img src="images/gallery-6.jpg" alt="Corporate Stage">
-                        <div class="gallery-overlay">
-                            <h4>Corporate Event Stage</h4>
-                            <p>Professional stage setup and decoration</p>
-                            <span class="category-tag">Events Decor</span>
+                        <div class="gallery-image-wrapper">
+                            <img src="images/gallery-6.jpg" alt="Corporate Stage">
+                            <div class="gallery-overlay">
+                                <div class="overlay-content">
+                                    <h4>Corporate Event Stage</h4>
+                                    <p>Professional stage setup and decoration</p>
+                                    <span class="category-tag">Events Decor</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -398,7 +422,10 @@
                 <form id="quoteForm" action="send_quote.php" method="POST" class="quote-form">
                      Step 1: Contact Information 
                     <div class="form-step active" data-step="1">
-                        <h3>Contact Information</h3>
+                        <div class="step-header">
+                            <span class="step-indicator">Step 1 of 2</span>
+                            <h3>Contact Information</h3>
+                        </div>
                         
                         <div class="form-group">
                             <label for="quote_fullname">Full Name *</label>
@@ -455,46 +482,50 @@
                             <h3>Event Details</h3>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="service_type">Service Type *</label>
-                            <select id="service_type" name="service_type" required>
-                                <option value="">Select a service</option>
-                                <option value="reception_styling">Reception Styling</option>
-                                <option value="full_venue_design">Full Venue Design</option>
-                                <option value="kuhingira_kwanjula">Kuhingira and Kwanjula</option>
-                                <option value="events_decor">Events Decor</option>
-                                <option value="custom">Custom Package</option>
-                            </select>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service_type">Service Type *</label>
+                                <select id="service_type" name="service_type" required>
+                                    <option value="">Select a service</option>
+                                    <option value="reception_styling">Reception Styling</option>
+                                    <option value="full_venue_design">Full Venue Design</option>
+                                    <option value="kuhingira_kwanjula">Kuhingira and Kwanjula</option>
+                                    <option value="events_decor">Events Decor</option>
+                                    <option value="custom">Custom Package</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guest_count">Number of Guests *</label>
+                                <select id="guest_count" name="guest_count" required>
+                                    <option value="">Select guest count</option>
+                                    <option value="1-50">1-50 guests</option>
+                                    <option value="51-100">51-100 guests</option>
+                                    <option value="101-200">101-200 guests</option>
+                                    <option value="201-300">201-300 guests</option>
+                                    <option value="301-500">301-500 guests</option>
+                                    <option value="500+">500+ guests</option>
+                                </select>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="guest_count">Number of Guests *</label>
-                            <select id="guest_count" name="guest_count" required>
-                                <option value="">Select guest count</option>
-                                <option value="1-50">1-50 guests</option>
-                                <option value="51-100">51-100 guests</option>
-                                <option value="101-200">101-200 guests</option>
-                                <option value="201-300">201-300 guests</option>
-                                <option value="301-500">301-500 guests</option>
-                                <option value="500+">500+ guests</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="budget_range">Budget Range *</label>
-                            <select id="budget_range" name="budget_range" required>
-                                <option value="">Select budget range</option>
-                                <option value="under_1m">Under 1M UGX</option>
-                                <option value="1m_3m">1M - 3M UGX</option>
-                                <option value="3m_5m">3M - 5M UGX</option>
-                                <option value="5m_10m">5M - 10M UGX</option>
-                                <option value="10m_plus">10M+ UGX</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="event_date">Event Date</label>
-                            <input type="date" id="event_date" name="event_date" placeholder="dd/mm/yyyy">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="budget_range">Budget Range *</label>
+                                <select id="budget_range" name="budget_range" required>
+                                    <option value="">Select budget range</option>
+                                    <option value="under_1m">Under 1M UGX</option>
+                                    <option value="1m_3m">1M - 3M UGX</option>
+                                    <option value="3m_5m">3M - 5M UGX</option>
+                                    <option value="5m_10m">5M - 10M UGX</option>
+                                    <option value="10m_plus">10M+ UGX</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="event_date">Event Date</label>
+                                <input type="date" id="event_date" name="event_date" placeholder="dd/mm/yyyy">
+                            </div>
                         </div>
                         
                         <div class="form-group">
@@ -619,7 +650,7 @@
                  Company Info 
                 <div class="footer-column">
                     <div class="footer-logo">
-                        <div class="logo-icon">💚</div>
+                        <div class="logo-icon">✨</div>
                         <h3>Traive Events</h3>
                     </div>
                     <p class="footer-description">
@@ -634,6 +665,9 @@
                         </a>
                         <a href="#" class="social-link" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
