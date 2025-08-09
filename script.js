@@ -1,3 +1,83 @@
+
+let currentStep = 1
+const totalSteps = 3
+const formSteps = document.querySelectorAll('.form-step')
+const progressBar = document.querySelector('.progress')
+const progressSteps = document.querySelectorAll('.progress-step')
+
+const quoteForm = document.getElementById('quote-form') // ✅ fixed ID
+const nextButton = document.querySelector('.btn-next')
+const prevButton = document.querySelector('.btn-prev')
+
+// Show step based on currentStep
+function showStep(step) {
+  formSteps.forEach((formStep, index) => {
+    formStep.classList.toggle('form-step-active', index === step - 1)
+  })
+
+  // Update progress bar
+  progressSteps.forEach((progressStep, index) => {
+    progressStep.classList.toggle('progress-step-active', index < step)
+  })
+
+  progressBar.style.width = `${((step - 1) / (totalSteps - 1)) * 100}%`
+}
+
+// Move to the next step
+function nextStep() {
+  if (currentStep < totalSteps) {
+    currentStep++
+    showStep(currentStep)
+  }
+}
+
+// Move to the previous step
+function prevStep() {
+  if (currentStep > 1) {
+    currentStep--
+    showStep(currentStep)
+  }
+}
+
+// Handle form submit for Step 1
+quoteForm.addEventListener('submit', function (event) {
+  event.preventDefault()
+
+  // HTML5 validation check
+  if (!quoteForm.checkValidity()) {
+    quoteForm.reportValidity()
+    return
+  }
+
+  nextStep()
+})
+
+// Handle Next and Previous button clicks
+if (nextButton) {
+  nextButton.addEventListener('click', function () {
+    if (currentStep === 1) {
+      // Trigger form submit on Step 1
+      quoteForm.requestSubmit()
+    } else {
+      nextStep()
+    }
+  })
+}
+
+if (prevButton) {
+  prevButton.addEventListener('click', prevStep)
+}
+
+// Initialize the form
+showStep(currentStep)
+
+
+
+
+
+
+
+
 // Carousel functionality
 let currentSlideIndex = 0
 const slides = document.querySelectorAll(".carousel-slide")
