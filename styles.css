@@ -801,147 +801,7 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   border: 1px solid #d4af37;
-  position: relative; /* Added for positioning form steps */
-  min-height: 500px; /* Added to give space for steps */
-}
-
-.form-progress {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-  border-bottom: 1px solid #e9ecef;
-}
-
-.progress-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.5;
-  transition: all 0.3s ease;
-}
-
-.progress-step.active {
-  opacity: 1;
-}
-
-.step-number {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #e9ecef;
-  color: #666;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.progress-step.active .step-number {
-  background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 100%);
-  color: #000;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-}
-
-.step-title {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #666;
-}
-
-.progress-step.active .step-title {
-  color: #333;
-  font-weight: 600;
-}
-
-.progress-line {
-  width: 100px;
-  height: 2px;
-  background: #e9ecef;
-  margin: 0 20px;
-  position: relative;
-}
-
-.progress-line::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, #d4af37, #f4e4bc);
-  transition: width 0.3s ease;
-}
-
-.quote-form {
-  padding: 40px;
-  position: relative; /* Added for positioning form steps */
-}
-
-.form-step {
-  display: none;
-  position: absolute; /* Added to stack steps */
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px; /* Apply padding here instead of .quote-form */
-  box-sizing: border-box; /* Ensure padding is included in width */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Added for smooth transition */
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.form-step.active {
-  display: block;
-  position: relative; /* Bring active step to front and allow content flow */
-  opacity: 1;
-  transform: translateX(0);
-  z-index: 1; /* Ensure active step is on top */
-}
-
-.step-header {
-  margin-bottom: 30px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.step-header-progress-dots {
-  display: flex;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.step-header-progress-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #e0e0e0;
-  transition: background-color 0.3s ease;
-}
-
-.step-header-progress-dot.active {
-  background-color: #28a745;
-}
-
-.step-indicator {
-  color: #d4af37;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.step-header h3 {
-  font-family: "Cinzel", serif;
-  font-size: 1.8rem;
-  color: #333;
-  margin-top: 10px;
+  padding: 40px; /* Apply padding directly to container */
 }
 
 .form-row {
@@ -1053,8 +913,6 @@ body {
   font-size: 1.2rem;
 }
 
-.btn-next,
-.btn-back,
 .btn-submit {
   padding: 15px 30px;
   border: none;
@@ -1063,47 +921,17 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-
-.btn-next,
-.btn-submit {
   background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 100%);
   color: #000;
   width: 100%;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  margin-top: 30px; /* Add margin top for spacing */
 }
 
-.btn-next:hover,
 .btn-submit:hover {
   background: linear-gradient(135deg, #b8941f 0%, #d4af37 100%);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-}
-
-.btn-back {
-  background: #f8f9fa;
-  color: #666;
-  border: 2px solid #e9ecef;
-}
-
-.btn-back:hover {
-  background: #e9ecef;
-  color: #333;
-  border-color: #d4af37;
-}
-
-.form-buttons {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.form-buttons .btn-back {
-  flex: 1;
-}
-
-.form-buttons .btn-submit {
-  flex: 2;
 }
 
 /* Contact Section */
@@ -1646,20 +1474,13 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .form-buttons {
-    flex-direction: column;
-  }
-
   .form-row {
     grid-template-columns: 1fr;
   }
 
   .quote-form-container {
     margin: 0 20px;
-  }
-
-  .quote-form {
-    padding: 30px 20px;
+    padding: 30px 20px; /* Adjust padding for smaller screens */
   }
 
   .contact-form-wrapper {
@@ -1731,15 +1552,6 @@ body {
 
   .contact-title {
     font-size: 2.5rem;
-  }
-
-  .form-progress {
-    padding: 20px;
-  }
-
-  .progress-line {
-    width: 60px;
-    margin: 0 10px;
   }
 
   .cta-title {
