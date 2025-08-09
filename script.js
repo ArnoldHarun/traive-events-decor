@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 // Carousel functionality
 let currentSlideIndex = 0
 const slides = document.querySelectorAll(".carousel-slide")
@@ -143,95 +133,28 @@ function scrollToQuote() {
   }
 }
 
-// Quote form functionality
-let currentStep = 1
-
-function nextStep() {
-  console.log("Attempting to go to next step. Current step:", currentStep)
-  if (validateStep(currentStep)) {
-    currentStep++
-    showStep(currentStep)
-    updateProgress()
-    console.log("Successfully moved to step:", currentStep)
-  } else {
-    console.log("Validation failed for step:", currentStep)
-  }
-}
-
-function prevStep() {
-  console.log("Attempting to go to previous step. Current step:", currentStep)
-  currentStep--
-  showStep(currentStep)
-  updateProgress()
-  console.log("Successfully moved to step:", currentStep)
-}
-
-function showStep(step) {
-  // Hide all steps
-  document.querySelectorAll(".form-step").forEach((stepEl) => {
-    stepEl.classList.remove("active")
-  })
-
-  // Show current step
-  const targetStep = document.querySelector(`[data-step="${step}"]`)
-  if (targetStep) {
-    targetStep.classList.add("active")
-  }
-
-  // Update step header progress dots
-  document.querySelectorAll(".step-header-progress-dot").forEach((dot) => {
-    dot.classList.remove("active")
-  })
-  const activeHeaderDot = document.querySelector(`.step-header-progress-dot[data-dot-step="${step}"]`)
-  if (activeHeaderDot) {
-    activeHeaderDot.classList.add("active")
-  }
-}
-
-function updateProgress() {
-  document.querySelectorAll(".progress-step").forEach((step) => {
-    step.classList.remove("active")
-  })
-
-  const activeProgressStep = document.querySelector(`.progress-step[data-step="${currentStep}"]`)
-  if (activeProgressStep) {
-    activeProgressStep.classList.add("active")
-  }
-
-  // Update progress line animation
-  const progressLine = document.querySelector(".progress-line")
-  if (progressLine) {
-    const progressAfter = progressLine.querySelector("::after") || progressLine
-    if (currentStep === 2) {
-      progressLine.style.setProperty("--progress-width", "100%")
-    } else {
-      progressLine.style.setProperty("--progress-width", "0%")
-    }
-  }
-}
-
-function validateStep(step) {
-  const currentStepEl = document.querySelector(`.form-step[data-step="${step}"]`)
-  if (!currentStepEl) {
-    console.log("validateStep: Current step element not found.")
+// Quote form validation (simplified for single step)
+function validateQuoteForm() {
+  const quoteForm = document.getElementById("quoteForm")
+  if (!quoteForm) {
+    console.log("validateQuoteForm: Quote form element not found.")
     return false
   }
 
-  const requiredFields = currentStepEl.querySelectorAll("[required]")
+  const requiredFields = quoteForm.querySelectorAll("[required]")
   let isValid = true
 
   requiredFields.forEach((field) => {
     if (field.type === "radio") {
-      const radioGroup = currentStepEl.querySelectorAll(`[name="${field.name}"]`)
+      const radioGroup = quoteForm.querySelectorAll(`[name="${field.name}"]`)
       const isChecked = Array.from(radioGroup).some((radio) => radio.checked)
       if (!isChecked) {
         isValid = false
-        // Highlight radio group container
         const radioContainer = field.closest(".communication-options")
         if (radioContainer) {
           radioContainer.style.borderColor = "#dc3545"
         }
-        console.log(`validateStep: Radio group "${field.name}" not checked.`)
+        console.log(`validateQuoteForm: Radio group "${field.name}" not checked.`)
       } else {
         const radioContainer = field.closest(".communication-options")
         if (radioContainer) {
@@ -242,7 +165,7 @@ function validateStep(step) {
       field.style.borderColor = "#dc3545"
       field.style.boxShadow = "0 0 0 3px rgba(220, 53, 69, 0.1)"
       isValid = false
-      console.log(`validateStep: Required field "${field.id || field.name}" is empty.`)
+      console.log(`validateQuoteForm: Required field "${field.id || field.name}" is empty.`)
     } else {
       field.style.borderColor = "#e9ecef"
       field.style.boxShadow = "none"
@@ -250,39 +173,36 @@ function validateStep(step) {
   })
 
   if (!isValid) {
-    // Create and show error message
-    let errorMsg = currentStepEl.querySelector(".error-message")
+    let errorMsg = quoteForm.querySelector(".error-message")
     if (!errorMsg) {
       errorMsg = document.createElement("div")
       errorMsg.className = "error-message"
       errorMsg.style.cssText = `
-                color: #dc3545;
-                background: #f8d7da;
-                border: 1px solid #f5c6cb;
-                padding: 10px 15px;
-                border-radius: 8px;
-                margin-top: 15px;
-                font-size: 0.9rem;
-                text-align: center;
-            `
-      errorMsg.textContent = "Please fill in all required fields before continuing."
-      currentStepEl.appendChild(errorMsg)
+              color: #dc3545;
+              background: #f8d7da;
+              border: 1px solid #f5c6cb;
+              padding: 10px 15px;
+              border-radius: 8px;
+              margin-top: 15px;
+              font-size: 0.9rem;
+              text-align: center;
+          `
+      errorMsg.textContent = "Please fill in all required fields before submitting."
+      quoteForm.appendChild(errorMsg)
     }
-    console.log("validateStep: Validation failed, showing error message.")
+    console.log("validateQuoteForm: Validation failed, showing error message.")
 
-    // Remove error message after 5 seconds
     setTimeout(() => {
       if (errorMsg && errorMsg.parentNode) {
         errorMsg.parentNode.removeChild(errorMsg)
       }
     }, 5000)
   } else {
-    // Remove any existing error messages
-    const errorMsg = currentStepEl.querySelector(".error-message")
+    const errorMsg = quoteForm.querySelector(".error-message")
     if (errorMsg) {
       errorMsg.parentNode.removeChild(errorMsg)
     }
-    console.log("validateStep: Validation passed.")
+    console.log("validateQuoteForm: Validation passed.")
   }
 
   return isValid
@@ -485,12 +405,12 @@ function showNotification(message, type = "info") {
 // Form submission handlers
 function initFormHandlers() {
   // Quote form submission
-  const quoteForm = document.getElementById("quote-form")
+  const quoteForm = document.getElementById("quoteForm")
   if (quoteForm) {
     quoteForm.addEventListener("submit", (e) => {
       e.preventDefault()
 
-      if (validateStep(2)) {
+      if (validateQuoteForm()) {
         // Show loading state
         const submitBtn = quoteForm.querySelector(".btn-submit")
         const originalText = submitBtn.innerHTML
@@ -511,9 +431,6 @@ function initFormHandlers() {
                 "success",
               )
               quoteForm.reset()
-              currentStep = 1
-              showStep(1)
-              updateProgress()
             } else {
               showNotification("Sorry, there was an error sending your request. Please try again.", "error")
             }
@@ -677,7 +594,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize touch support
   initTouchSupport()
 })
-
-
-
-
