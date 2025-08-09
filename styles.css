@@ -889,28 +889,28 @@ body {
 .step-header {
   margin-bottom: 30px;
   text-align: center;
-  display: flex; /* Add this line */
-  flex-direction: column; /* Add this line */
-  align-items: center; /* Add this line */
-  justify-content: center; /* Add this line */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .step-header-progress-dots {
   display: flex;
   gap: 8px;
-  margin-top: 10px; /* Adjust as needed for spacing */
+  margin-top: 10px;
 }
 
 .step-header-progress-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #e0e0e0; /* Inactive dot color */
+  background-color: #e0e0e0;
   transition: background-color 0.3s ease;
 }
 
 .step-header-progress-dot.active {
-  background-color: #28a745; /* Active dot color (green from image) */
+  background-color: #28a745;
 }
 
 .step-indicator {
@@ -965,6 +965,98 @@ body {
   border-color: #d4af37;
   background: white;
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.quote-form .form-step[data-step="2"] .form-group {
+  margin-bottom: 25px;
+}
+
+.quote-form .form-step[data-step="2"] .form-group:last-of-type {
+  margin-bottom: 30px;
+}
+
+.quote-form .form-step[data-step="2"] input,
+.quote-form .form-step[data-step="2"] select,
+.quote-form .form-step[data-step="2"] textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.quote-form .form-step[data-step="2"] input:focus,
+.quote-form .form-step[data-step="2"] select:focus,
+.quote-form .form-step[data-step="2"] textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.quote-form .form-step[data-step="2"] input[type="date"] {
+  position: relative;
+  color: #666;
+}
+
+.quote-form .form-step[data-step="2"] input[type="date"]::-webkit-calendar-picker-indicator {
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23D4AF37"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>')
+    no-repeat center;
+  background-size: 20px;
+  cursor: pointer;
+}
+
+.quote-form .form-step[data-step="2"] textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.quote-form .form-step[data-step="2"] .form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.quote-form .form-step[data-step="2"] .btn-back {
+  flex: 1;
+  background: #f8f9fa;
+  color: #666;
+  border: 2px solid #e9ecef;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.quote-form .form-step[data-step="2"] .btn-back:hover {
+  background: #e9ecef;
+  color: #333;
+  border-color: #d4af37;
+}
+
+.quote-form .form-step[data-step="2"] .btn-submit {
+  flex: 2;
+  background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 100%);
+  color: #000;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.quote-form .form-step[data-step="2"] .btn-submit:hover {
+  background: linear-gradient(135deg, #b8941f 0%, #d4af37 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 .communication-options {
