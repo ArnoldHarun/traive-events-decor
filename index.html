@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAIVE Events - Event Planning and Decoration</title>
+    <meta name="description" content="RAIVE Events is a premier event planning and decoration company specializing in creating unforgettable experiences. From weddings to corporate events, we bring your vision to life with creativity and precision.">
+    
+     Favicon 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+     Stylesheets 
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+     Google Fonts 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Satisfy&display=swap" rel="stylesheet">
+    
+     Font Awesome Icons 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+     Preloader 
+    <div id="preloader">
+        <div class="loader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+     Navigation 
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="RAIVE Events Logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#quote">Get Quote</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="contact-btn" onclick="scrollToContact()">Contact Us</button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+     Hero Carousel Section 
+    <section id="home" class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="slide-bg" style="background-image: url('images/hero-bg-1.jpg')"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Whimsical Beauty</h1>
+                    <h2 class="slide-subtitle">Garden Paradise</h2>
+                    <p class="slide-description">Bringing fairy tale magic to your outdoor celebration</p>
+                    <div class="slide-buttons">
+                        <button class="btn-primary">
+                            <span class="heart-icon">♡</span>
+                            Start Planning
+                        </button>
+                        <button class="btn-secondary">
+                            <span class="star-icon">☆</span>
+                            View Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('images/hero-bg-2.jpg')"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Elegant Sophistication</h1>
+                    <h2 class="slide-subtitle">Luxury Weddings</h2>
+                    <p class="slide-description">Creating timeless moments with exquisite attention to detail</p>
+                    <div class="slide-buttons">
+                        <button class="btn-primary">
+                            <span class="heart-icon">♡</span>
+                            Start Planning
+                        </button>
+                        <button class="btn-secondary">
+                            <span class="star-icon">☆</span>
+                            View Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('images/hero-bg-3.jpg')"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Corporate Excellence</h1>
+                    <h2 class="slide-subtitle">Professional Events</h2>
+                    <p class="slide-description">Elevating your business occasions with creative flair</p>
+                    <div class="slide-buttons">
+                        <button class="btn-primary">
+                            <span class="heart-icon">♡</span>
+                            Start Planning
+                        </button>
+                        <button class="btn-secondary">
+                            <span class="star-icon">☆</span>
+                            View Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('images/hero-bg-4.jpg')"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Cultural Heritage</h1>
+                    <h2 class="slide-subtitle">Traditional Ceremonies</h2>
+                    <p class="slide-description">Honoring traditions with authentic cultural celebrations</p>
+                    <div class="slide-buttons">
+                        <button class="btn-primary">
+                            <span class="heart-icon">♡</span>
+                            Start Planning
+                        </button>
+                        <button class="btn-secondary">
+                            <span class="star-icon">☆</span>
+                            View Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-bg" style="background-image: url('images/hero-bg-5.jpg')"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Intimate Celebrations</h1>
+                    <h2 class="slide-subtitle">Personal Moments</h2>
+                    <p class="slide-description">Making every milestone memorable with personalized touches</p>
+                    <div class="slide-buttons">
+                        <button class="btn-primary">
+                            <span class="heart-icon">♡</span>
+                            Start Planning
+                        </button>
+                        <button class="btn-secondary">
+                            <span class="star-icon">☆</span>
+                            View Gallery
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         Carousel Navigation 
+        <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">‹</button>
+        <button class="carousel-btn next-btn" onclick="changeSlide(1)">›</button>
+        
+         Carousel Dots 
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </section>
+
+     Services Section 
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="services-header">
+                <h2>Our Services</h2>
+                <p>From intimate ceremonies to grand celebrations, we create magical moments with our comprehensive decoration services</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/service-1.jpg" alt="Reception Styling">
+                        <div class="popular-badge">
+                            <span class="star-icon">☆</span>
+                            Popular
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Reception Styling</h3>
+                        <p>Transform your reception venue with elegant table settings, centerpieces, and ambient lighting.</p>
+                        <ul class="service-features">
+                            <li>• Table Centerpieces</li>
+                            <li>• Lighting Design</li>
+                            <li>• Draping</li>
+                            <li>• Lounge Areas</li>
+                        </ul>
+                        <button class="learn-more-btn">Learn More →</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/service-2.jpg" alt="Full Venue Design">
+                    </div>
+                    <div class="service-content">
+                        <h3>Full Venue Design</h3>
+                        <p>Complete venue transformation from ceremony to reception with cohesive design elements.</p>
+                        <ul class="service-features">
+                            <li>• Complete Setup</li>
+                            <li>• Coordination</li>
+                            <li>• Teardown</li>
+                            <li>• Timeline Management</li>
+                        </ul>
+                        <button class="learn-more-btn">Learn More →</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/service-3.jpg" alt="Kuhingira and Kwanjula">
+                        <div class="popular-badge">
+                            <span class="star-icon">☆</span>
+                            Popular
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h3>Kuhingira and Kwanjula</h3>
+                        <p>Traditional Ugandan wedding celebrations with authentic cultural decorations and setups.</p>
+                        <ul class="service-features">
+                            <li>• Cultural Decorations</li>
+                            <li>• Traditional Setups</li>
+                            <li>• Authentic Styling</li>
+                            <li>• Cultural Coordination</li>
+                        </ul>
+                        <button class="learn-more-btn green">Learn More →</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/service-4.jpg" alt="Events Decor">
+                    </div>
+                    <div class="service-content">
+                        <h3>Events Decor</h3>
+                        <p>Professional decoration services for all types of events and celebrations.</p>
+                        <ul class="service-features">
+                            <li>• Corporate Events</li>
+                            <li>• Private Parties</li>
+                            <li>• Special Occasions</li>
+                            <li>• Custom Themes</li>
+                        </ul>
+                        <button class="learn-more-btn">Learn More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Gallery Section 
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+             Schedule Consultation Button 
+            <div class="consultation-header">
+                <button class="consultation-btn" onclick="scrollToContact()">Schedule Consultation</button>
+            </div>
+
+             Video Section 
+            <div class="video-section">
+                <div class="video-header">
+                    <h2>Our Video Portfolio</h2>
+                    <p>Watch our event transformations come to life through these curated videos showcasing our expertise</p>
+                </div>
+                
+                <div class="video-player-container">
+                    <div class="main-video">
+                        <iframe id="mainVideo" width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        <div class="video-info">
+                            <h3 id="videoTitle">Corporate Event Setup</h3>
+                            <p id="videoDescription">Professional event styling and decoration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="video-thumbnails">
+                        <div class="thumbnail active" onclick="changeVideo('dQw4w9WgXcQ', 'Corporate Event Setup', 'Professional event styling and decoration')">
+                            <img src="images/video-thumb-1.jpg" alt="Corporate Event">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="thumbnail" onclick="changeVideo('dQw4w9WgXcQ', 'Wedding Reception', 'Elegant wedding reception decorations')">
+                            <img src="images/video-thumb-2.jpg" alt="Wedding Reception">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="thumbnail" onclick="changeVideo('dQw4w9WgXcQ', 'Cultural Ceremony', 'Traditional wedding ceremony setup')">
+                            <img src="images/video-thumb-3.jpg" alt="Cultural Ceremony">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="thumbnail" onclick="changeVideo('dQw4w9WgXcQ', 'Garden Party', 'Outdoor celebration decorations')">
+                            <img src="images/video-thumb-4.jpg" alt="Garden Party">
+                            <div class="play-icon">▶</div>
+                        </div>
+                        <div class="thumbnail" onclick="changeVideo('dQw4w9WgXcQ', 'Birthday Celebration', 'Colorful birthday party setup')">
+                            <img src="images/video-thumb-5.jpg" alt="Birthday Party">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                    <div class="video-counter">4 of 5</div>
+                </div>
+            </div>
+
+             Image Gallery 
+            <div class="image-gallery">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" onclick="filterGallery('all')">All Projects</button>
+                    <button class="filter-btn" onclick="filterGallery('reception')">Reception Styling</button>
+                    <button class="filter-btn" onclick="filterGallery('venue')">Full Venue Design</button>
+                    <button class="filter-btn" onclick="filterGallery('cultural')">Kuhingira & Kwanjula</button>
+                    <button class="filter-btn" onclick="filterGallery('events')">Events Decor</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="reception">
+                        <img src="images/gallery-1.jpg" alt="Elegant Table Setting">
+                        <div class="gallery-overlay">
+                            <h4>Elegant Table Setting</h4>
+                            <p>Beautiful centerpieces with golden accents</p>
+                            <span class="category-tag">Reception Styling</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="venue">
+                        <img src="images/gallery-2.jpg" alt="Venue Transformation">
+                        <div class="gallery-overlay">
+                            <h4>Venue Transformation</h4>
+                            <p>Complete setup with elegant chandeliers</p>
+                            <span class="category-tag">Full Venue Design</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="events">
+                        <img src="images/gallery-3.jpg" alt="Balloon Arch">
+                        <div class="gallery-overlay">
+                            <h4>Colorful Balloon Arch</h4>
+                            <p>Vibrant balloon decorations for celebrations</p>
+                            <span class="category-tag">Events Decor</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="cultural">
+                        <img src="images/gallery-4.jpg" alt="Traditional Setup">
+                        <div class="gallery-overlay">
+                            <h4>Traditional Wedding Setup</h4>
+                            <p>Authentic cultural decorations and styling</p>
+                            <span class="category-tag">Kuhingira & Kwanjula</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="reception">
+                        <img src="images/gallery-5.jpg" alt="Romantic Dinner">
+                        <div class="gallery-overlay">
+                            <h4>Romantic Dinner Setup</h4>
+                            <p>Intimate candlelit dining experience</p>
+                            <span class="category-tag">Reception Styling</span>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="events">
+                        <img src="images/gallery-6.jpg" alt="Corporate Stage">
+                        <div class="gallery-overlay">
+                            <h4>Corporate Event Stage</h4>
+                            <p>Professional stage setup and decoration</p>
+                            <span class="category-tag">Events Decor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Get Quote Section 
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <div class="quote-header">
+                <h2>Get Your Quote</h2>
+                <p>Let's bring your vision to life with a personalized quote for your special event</p>
+            </div>
+            
+            <div class="quote-form-container">
+                <div class="form-progress">
+                    <div class="progress-step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Contact Info</span>
+                    </div>
+                    <div class="progress-line"></div>
+                    <div class="progress-step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Event Details</span>
+                    </div>
+                </div>
+
+                <form id="quoteForm" action="send_quote.php" method="POST" class="quote-form">
+                     Step 1: Contact Information 
+                    <div class="form-step active" data-step="1">
+                        <h3>Contact Information</h3>
+                        
+                        <div class="form-group">
+                            <label for="quote_fullname">Full Name *</label>
+                            <input type="text" id="quote_fullname" name="fullname" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote_email">Email Address *</label>
+                            <input type="email" id="quote_email" name="email" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote_phone">Phone Number *</label>
+                            <input type="tel" id="quote_phone" name="phone" required placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Preferred Communication Method *</label>
+                            <div class="communication-options">
+                                <label class="radio-option">
+                                    <input type="radio" name="communication" value="email" required>
+                                    <span class="radio-custom"></span>
+                                    <div class="option-content">
+                                        <span class="option-icon">✉</span>
+                                        <span>Email</span>
+                                    </div>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="communication" value="phone" required>
+                                    <span class="radio-custom"></span>
+                                    <div class="option-content">
+                                        <span class="option-icon">📞</span>
+                                        <span>Phone Call</span>
+                                    </div>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="communication" value="whatsapp" required>
+                                    <span class="radio-custom"></span>
+                                    <div class="option-content">
+                                        <span class="option-icon">💬</span>
+                                        <span>WhatsApp</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn-next" onclick="nextStep()">Continue to Event Details →</button>
+                    </div>
+
+                     Step 2: Event Details 
+                    <div class="form-step" data-step="2">
+                        <div class="step-header">
+                            <span class="step-indicator">Step 2 of 2</span>
+                            <h3>Event Details</h3>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service_type">Service Type *</label>
+                            <select id="service_type" name="service_type" required>
+                                <option value="">Select a service</option>
+                                <option value="reception_styling">Reception Styling</option>
+                                <option value="full_venue_design">Full Venue Design</option>
+                                <option value="kuhingira_kwanjula">Kuhingira and Kwanjula</option>
+                                <option value="events_decor">Events Decor</option>
+                                <option value="custom">Custom Package</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="guest_count">Number of Guests *</label>
+                            <select id="guest_count" name="guest_count" required>
+                                <option value="">Select guest count</option>
+                                <option value="1-50">1-50 guests</option>
+                                <option value="51-100">51-100 guests</option>
+                                <option value="101-200">101-200 guests</option>
+                                <option value="201-300">201-300 guests</option>
+                                <option value="301-500">301-500 guests</option>
+                                <option value="500+">500+ guests</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget_range">Budget Range *</label>
+                            <select id="budget_range" name="budget_range" required>
+                                <option value="">Select budget range</option>
+                                <option value="under_1m">Under 1M UGX</option>
+                                <option value="1m_3m">1M - 3M UGX</option>
+                                <option value="3m_5m">3M - 5M UGX</option>
+                                <option value="5m_10m">5M - 10M UGX</option>
+                                <option value="10m_plus">10M+ UGX</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="event_date">Event Date</label>
+                            <input type="date" id="event_date" name="event_date" placeholder="dd/mm/yyyy">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="venue">Venue (if known)</label>
+                            <input type="text" id="venue" name="venue" placeholder="Enter venue name or location">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additional_info">Additional Information</label>
+                            <textarea id="additional_info" name="additional_info" rows="4" placeholder="Tell us more about your vision, specific requirements, or any questions..."></textarea>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn-back" onclick="prevStep()">← Back</button>
+                            <button type="submit" class="btn-submit">Submit Quote Request</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+     Contact Section 
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-subtitle">Ready to plan your dream event? Contact us today and let's bring your vision to life.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>We're here to help you create unforgettable moments. Reach out to us through any of the channels below.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+256 758 185 337</p>
+                                <p>+256 787 367 747</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">✉</div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>traiveevents3@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Kampala, Uganda</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="business-hours">
+                        <h4>Business Hours</h4>
+                        <div class="hours-list">
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 4:00 PM</p>
+                            <p>Sunday: By Appointment</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm" action="send_contact.php" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label for="contact_fullname">Full Name *</label>
+                            <input type="text" id="contact_fullname" name="fullname" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact_email">Email Address *</label>
+                            <input type="email" id="contact_email" name="email" required placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact_phone">Phone Number</label>
+                            <input type="tel" id="contact_phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact_message">Message *</label>
+                            <textarea id="contact_message" name="message" rows="5" required placeholder="Tell us about your event, vision, or any questions you have..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-send">
+                            <span class="send-icon">✈</span>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Call to Action Section 
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Create Your Own Story?</h2>
+            <p class="cta-subtitle">Let us bring your vision to life with our expertise and attention to detail</p>
+            <div class="cta-buttons">
+                <button class="btn-start-planning" onclick="scrollToContact()">Start Planning</button>
+                <button class="btn-get-quote" onclick="scrollToQuote()">Get Quote</button>
+            </div>
+        </div>
+    </section>
+
+     Footer 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                 Company Info 
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <div class="logo-icon">💚</div>
+                        <h3>Traive Events</h3>
+                    </div>
+                    <p class="footer-description">
+                        Creating magical moments with exceptional event decorations. Your special day deserves nothing less than perfection.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                 Quick Links 
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                 Our Services 
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Reception Styling</a></li>
+                        <li><a href="#services">Full Venue Design</a></li>
+                        <li><a href="#services">Kuhingira and Kwanjula</a></li>
+                        <li><a href="#services">Events Decor</a></li>
+                        <li><a href="#services">Event Consultation</a></li>
+                        <li><a href="#services">Custom Packages</a></li>
+                    </ul>
+                </div>
+
+                 Get In Touch 
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+256 704000474</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@traiveevents.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kampala, Uganda</span>
+                        </div>
+                    </div>
+                    
+                    <div class="newsletter">
+                        <h5>Newsletter</h5>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+             Footer Bottom 
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 TraiveEvents. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
