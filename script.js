@@ -137,17 +137,23 @@ function scrollToQuote() {
 let currentStep = 1
 
 function nextStep() {
+  console.log("Attempting to go to next step. Current step:", currentStep)
   if (validateStep(currentStep)) {
     currentStep++
     showStep(currentStep)
     updateProgress()
+    console.log("Successfully moved to step:", currentStep)
+  } else {
+    console.log("Validation failed for step:", currentStep)
   }
 }
 
 function prevStep() {
+  console.log("Attempting to go to previous step. Current step:", currentStep)
   currentStep--
   showStep(currentStep)
   updateProgress()
+  console.log("Successfully moved to step:", currentStep)
 }
 
 function showStep(step) {
@@ -196,7 +202,10 @@ function updateProgress() {
 
 function validateStep(step) {
   const currentStepEl = document.querySelector(`.form-step[data-step="${step}"]`)
-  if (!currentStepEl) return false
+  if (!currentStepEl) {
+    console.log("validateStep: Current step element not found.")
+    return false
+  }
 
   const requiredFields = currentStepEl.querySelectorAll("[required]")
   let isValid = true
@@ -212,6 +221,7 @@ function validateStep(step) {
         if (radioContainer) {
           radioContainer.style.borderColor = "#dc3545"
         }
+        console.log(`validateStep: Radio group "${field.name}" not checked.`)
       } else {
         const radioContainer = field.closest(".communication-options")
         if (radioContainer) {
@@ -222,6 +232,7 @@ function validateStep(step) {
       field.style.borderColor = "#dc3545"
       field.style.boxShadow = "0 0 0 3px rgba(220, 53, 69, 0.1)"
       isValid = false
+      console.log(`validateStep: Required field "${field.id || field.name}" is empty.`)
     } else {
       field.style.borderColor = "#e9ecef"
       field.style.boxShadow = "none"
@@ -247,6 +258,7 @@ function validateStep(step) {
       errorMsg.textContent = "Please fill in all required fields before continuing."
       currentStepEl.appendChild(errorMsg)
     }
+    console.log("validateStep: Validation failed, showing error message.")
 
     // Remove error message after 5 seconds
     setTimeout(() => {
@@ -260,6 +272,7 @@ function validateStep(step) {
     if (errorMsg) {
       errorMsg.parentNode.removeChild(errorMsg)
     }
+    console.log("validateStep: Validation passed.")
   }
 
   return isValid
