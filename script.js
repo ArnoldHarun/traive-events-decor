@@ -475,7 +475,7 @@ function showNotification(message, type = "info") {
 // Form submission handlers
 function initFormHandlers() {
   // Quote form submission
-  const quoteForm = document.getElementById("quoteForm")
+  const quoteForm = document.getElementById("quote-form")
   if (quoteForm) {
     quoteForm.addEventListener("submit", (e) => {
       e.preventDefault()
