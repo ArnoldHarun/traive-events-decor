@@ -42,10 +42,9 @@
               <li><a href="#home">Home</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#quote">Get Quote</a></li>
               <li><a href="#contact">Contact</a></li>
           </ul>
-          <button class="contact-btn" onclick="scrollToContact()">Contact Us</button>
+          <button class="contact-btn" onclick="openQuoteModal()">Get Quote</button>
           <div class="hamburger">
               <span class="bar"></span>
               <span class="bar"></span>
@@ -64,11 +63,11 @@
                   <h2 class="slide-subtitle">Garden Paradise</h2>
                   <p class="slide-description">Bringing fairy tale magic to your outdoor celebration</p>
                   <div class="slide-buttons">
-                      <button class="btn-primary">
+                      <button class="btn-primary" onclick="openQuoteModal()">
                           <span class="heart-icon">♡</span>
                           Start Planning
                       </button>
-                      <button class="btn-secondary">
+                      <button class="btn-secondary" onclick="scrollToGallery()">
                           <span class="star-icon">☆</span>
                           View Gallery
                       </button>
@@ -83,11 +82,11 @@
                   <h2 class="slide-subtitle">Luxury Weddings</h2>
                   <p class="slide-description">Creating timeless moments with exquisite attention to detail</p>
                   <div class="slide-buttons">
-                      <button class="btn-primary">
+                      <button class="btn-primary" onclick="openQuoteModal()">
                           <span class="heart-icon">♡</span>
                           Start Planning
                       </button>
-                      <button class="btn-secondary">
+                      <button class="btn-secondary" onclick="scrollToGallery()">
                           <span class="star-icon">☆</span>
                           View Gallery
                       </button>
@@ -102,11 +101,11 @@
                   <h2 class="slide-subtitle">Professional Events</h2>
                   <p class="slide-description">Elevating your business occasions with creative flair</p>
                   <div class="slide-buttons">
-                      <button class="btn-primary">
+                      <button class="btn-primary" onclick="openQuoteModal()">
                           <span class="heart-icon">♡</span>
                           Start Planning
                       </button>
-                      <button class="btn-secondary">
+                      <button class="btn-secondary" onclick="scrollToGallery()">
                           <span class="star-icon">☆</span>
                           View Gallery
                       </button>
@@ -121,11 +120,11 @@
                   <h2 class="slide-subtitle">Traditional Ceremonies</h2>
                   <p class="slide-description">Honoring traditions with authentic cultural celebrations</p>
                   <div class="slide-buttons">
-                      <button class="btn-primary">
+                      <button class="btn-primary" onclick="openQuoteModal()">
                           <span class="heart-icon">♡</span>
                           Start Planning
                       </button>
-                      <button class="btn-secondary">
+                      <button class="btn-secondary" onclick="scrollToGallery()">
                           <span class="star-icon">☆</span>
                           View Gallery
                       </button>
@@ -140,11 +139,11 @@
                   <h2 class="slide-subtitle">Personal Moments</h2>
                   <p class="slide-description">Making every milestone memorable with personalized touches</p>
                   <div class="slide-buttons">
-                      <button class="btn-primary">
+                      <button class="btn-primary" onclick="openQuoteModal()">
                           <span class="heart-icon">♡</span>
                           Start Planning
                       </button>
-                      <button class="btn-secondary">
+                      <button class="btn-secondary" onclick="scrollToGallery()">
                           <span class="star-icon">☆</span>
                           View Gallery
                       </button>
@@ -389,128 +388,232 @@
                           </div>
                       </div>
                   </div>
+
+                    Additional Reception Styling Items  
+                  <div class="gallery-item" data-category="reception">
+                      <div class="gallery-image-wrapper">
+                          <img src="images/gallery-7.jpg" alt="Floral Centerpieces">
+                          <div class="gallery-overlay">
+                              <div class="overlay-content">
+                                  <h4>Floral Centerpieces</h4>
+                                  <p>Stunning fresh flower arrangements</p>
+                                  <span class="category-tag">Reception Styling</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="gallery-item" data-category="reception">
+                      <div class="gallery-image-wrapper">
+                          <img src="images/gallery-8.jpg" alt="Crystal Chandelier Setup">
+                          <div class="gallery-overlay">
+                              <div class="overlay-content">
+                                  <h4>Crystal Chandelier Setup</h4>
+                                  <p>Luxurious lighting for elegant receptions</p>
+                                  <span class="category-tag">Reception Styling</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                    Additional Venue Design Items  
+                  <div class="gallery-item" data-category="venue">
+                      <div class="gallery-image-wrapper">
+                          <img src="images/gallery-9.jpg" alt="Garden Wedding Venue">
+                          <div class="gallery-overlay">
+                              <div class="overlay-content">
+                                  <h4>Garden Wedding Venue</h4>
+                                  <p>Outdoor ceremony with natural beauty</p>
+                                  <span class="category-tag">Full Venue Design</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="gallery-item" data-category="venue">
+                      <div class="gallery-image-wrapper">
+                          <img src="images/gallery-10.jpg" alt="Ballroom Transformation">
+                          <div class="gallery-overlay">
+                              <div class="overlay-content">
+                                  <h4>Ballroom Transformation</h4>
+                                  <p>Grand ballroom with dramatic draping</p>
+                                  <span class="category-tag">Full Venue Design</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                    Additional Cultural Items  
+                  <div class="gallery-item" data-category="cultural">
+                      <div class="gallery-image-wrapper">
+                          <img src="images/gallery-11.jpg" alt="Traditional Ceremony Arch">
+                          <div class="gallery-overlay">
+                              <div class="overlay-content">
+                                  <h4>Traditional Ceremony Arch</h4>
+                                  <p>Authentic cultural wedding arch design</p>
+                                  <span class="category-tag">Kuhingira & Kwanjula</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="gallery-item" data-category="cultural">
+                      <div class="gallery-image-wrapper">
+                          <img src="images/gallery-12.jpg" alt="Cultural Dance Floor">
+                          <div class="gallery-overlay">
+                              <div class="overlay-content">
+                                  <h4>Cultural Dance Floor</h4>
+                                  <p>Traditional setup for cultural celebrations</p>
+                                  <span class="category-tag">Kuhingira & Kwanjula</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                    Additional Events Decor Items  
+                  <div class="gallery-item" data-category="events">
+                      <div class="gallery-image-wrapper">
+                          <img src="images/gallery-13.jpg" alt="Birthday Party Theme">
+                          <div class="gallery-overlay">
+                              <div class="overlay-content">
+                                  <h4>Birthday Party Theme</h4>
+                                  <p>Colorful themed decorations for celebrations</p>
+                                  <span class="category-tag">Events Decor</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="gallery-item" data-category="events">
+                      <div class="gallery-image-wrapper">
+                          <img src="images/gallery-14.jpg" alt="Corporate Gala Setup">
+                          <div class="gallery-overlay">
+                              <div class="overlay-content">
+                                  <h4>Corporate Gala Setup</h4>
+                                  <p>Professional event styling for business functions</p>
+                                  <span class="category-tag">Events Decor</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
           </div>
       </div>
   </section>
 
-    Get Quote Section  
-  <section id="quote" class="quote-section">
-      <div class="container">
-          <div class="quote-header">
+    Quote Modal  
+  <div id="quoteModal" class="modal">
+      <div class="modal-content">
+          <div class="modal-header">
               <h2>Get Your Quote</h2>
-              <p>Let's bring your vision to life with a personalized quote for your special event</p>
+              <span class="close" onclick="closeQuoteModal()">&times;</span>
           </div>
-          
-          <div class="quote-form-container">
-              <form id="quoteForm" action="send_quote.php" method="POST" class="quote-form">
-                    All Fields Consolidated  
-                  <div class="form-group">
-                      <label for="quote_fullname">Full Name *</label>
-                      <input type="text" id="quote_fullname" name="fullname" required placeholder="Enter your full name">
+          <form id="quoteForm" action="send_quote.php" method="POST" class="quote-form">
+              <div class="form-group">
+                  <label for="quote_fullname">Full Name *</label>
+                  <input type="text" id="quote_fullname" name="fullname" required placeholder="Enter your full name">
+              </div>
+              
+              <div class="form-group">
+                  <label for="quote_email">Email Address *</label>
+                  <input type="email" id="quote_email" name="email" required placeholder="Enter your email">
+              </div>
+              
+              <div class="form-group">
+                  <label for="quote_phone">Phone Number *</label>
+                  <input type="tel" id="quote_phone" name="phone" required placeholder="Enter your phone number">
+              </div>
+              
+              <div class="form-group">
+                  <label>Preferred Communication Method *</label>
+                  <div class="communication-options">
+                      <label class="radio-option">
+                          <input type="radio" name="communication" value="email" required>
+                          <span class="radio-custom"></span>
+                          <div class="option-content">
+                              <i class="fas fa-envelope option-icon"></i>
+                              <span>Email</span>
+                          </div>
+                      </label>
+                      <label class="radio-option">
+                          <input type="radio" name="communication" value="phone" required>
+                          <span class="radio-custom"></span>
+                          <div class="option-content">
+                              <i class="fas fa-phone option-icon"></i>
+                              <span>Phone Call</span>
+                          </div>
+                      </label>
+                      <label class="radio-option">
+                          <input type="radio" name="communication" value="whatsapp" required>
+                          <span class="radio-custom"></span>
+                          <div class="option-content">
+                              <i class="fab fa-whatsapp option-icon"></i>
+                              <span>WhatsApp</span>
+                          </div>
+                      </label>
                   </div>
-                  
-                  <div class="form-group">
-                      <label for="quote_email">Email Address *</label>
-                      <input type="email" id="quote_email" name="email" required placeholder="Enter your email">
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="quote_phone">Phone Number *</label>
-                      <input type="tel" id="quote_phone" name="phone" required placeholder="Enter your phone number">
-                  </div>
-                  
-                  <div class="form-group">
-                      <label>Preferred Communication Method *</label>
-                      <div class="communication-options">
-                          <label class="radio-option">
-                              <input type="radio" name="communication" value="email" required>
-                              <span class="radio-custom"></span>
-                              <div class="option-content">
-                                  <i class="fas fa-envelope option-icon"></i>
-                                  <span>Email</span>
-                              </div>
-                          </label>
-                          <label class="radio-option">
-                              <input type="radio" name="communication" value="phone" required>
-                              <span class="radio-custom"></span>
-                              <div class="option-content">
-                                  <i class="fas fa-phone option-icon"></i>
-                                  <span>Phone Call</span>
-                              </div>
-                          </label>
-                          <label class="radio-option">
-                              <input type="radio" name="communication" value="whatsapp" required>
-                              <span class="radio-custom"></span>
-                              <div class="option-content">
-                                  <i class="fab fa-whatsapp option-icon"></i>
-                                  <span>WhatsApp</span>
-                              </div>
-                          </label>
-                      </div>
-                  </div>
+              </div>
 
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="service_type">Service Type *</label>
-                          <select id="service_type" name="service_type" required>
-                              <option value="">Select a service</option>
-                              <option value="reception_styling">Reception Styling</option>
-                              <option value="full_venue_design">Full Venue Design</option>
-                              <option value="kuhingira_kwanjula">Kuhingira and Kwanjula</option>
-                              <option value="events_decor">Events Decor</option>
-                              <option value="custom">Custom Package</option>
-                          </select>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="guest_count">Number of Guests *</label>
-                          <select id="guest_count" name="guest_count" required>
-                              <option value="">Select guest count</option>
-                              <option value="1-50">1-50 guests</option>
-                              <option value="51-100">51-100 guests</option>
-                              <option value="101-200">101-200 guests</option>
-                              <option value="201-300">201-300 guests</option>
-                              <option value="301-500">301-500 guests</option>
-                              <option value="500+">500+ guests</option>
-                          </select>
-                      </div>
-                  </div>
-                  
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="budget_range">Budget Range *</label>
-                          <select id="budget_range" name="budget_range" required>
-                              <option value="">Select budget range</option>
-                              <option value="under_1m">Under 1M UGX</option>
-                              <option value="1m_3m">1M - 3M UGX</option>
-                              <option value="3m_5m">3M - 5M UGX</option>
-                              <option value="5m_10m">5M - 10M UGX</option>
-                              <option value="10m_plus">10M+ UGX</option>
-                          </select>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="event_date">Event Date</label>
-                          <input type="date" id="event_date" name="event_date" placeholder="dd/mm/yyyy">
-                      </div>
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="service_type">Service Type *</label>
+                      <select id="service_type" name="service_type" required>
+                          <option value="">Select a service</option>
+                          <option value="reception_styling">Reception Styling</option>
+                          <option value="full_venue_design">Full Venue Design</option>
+                          <option value="kuhingira_kwanjula">Kuhingira and Kwanjula</option>
+                          <option value="events_decor">Events Decor</option>
+                          <option value="custom">Custom Package</option>
+                      </select>
                   </div>
                   
                   <div class="form-group">
-                      <label for="venue">Venue (if known)</label>
-                      <input type="text" id="venue" name="venue" placeholder="Enter venue name or location">
+                      <label for="guest_count">Number of Guests *</label>
+                      <select id="guest_count" name="guest_count" required>
+                          <option value="">Select guest count</option>
+                          <option value="1-50">1-50 guests</option>
+                          <option value="51-100">51-100 guests</option>
+                          <option value="101-200">101-200 guests</option>
+                          <option value="201-300">201-300 guests</option>
+                          <option value="301-500">301-500 guests</option>
+                          <option value="500+">500+ guests</option>
+                      </select>
+                  </div>
+              </div>
+              
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="budget_range">Budget Range *</label>
+                      <select id="budget_range" name="budget_range" required>
+                          <option value="">Select budget range</option>
+                          <option value="under_1m">Under 1M UGX</option>
+                          <option value="1m_3m">1M - 3M UGX</option>
+                          <option value="3m_5m">3M - 5M UGX</option>
+                          <option value="5m_10m">5M - 10M UGX</option>
+                          <option value="10m_plus">10M+ UGX</option>
+                      </select>
                   </div>
                   
                   <div class="form-group">
-                      <label for="additional_info">Additional Information</label>
-                      <textarea id="additional_info" name="additional_info" rows="4" placeholder="Tell us more about your vision, specific requirements, or any questions..."></textarea>
+                      <label for="event_date">Event Date</label>
+                      <input type="date" id="event_date" name="event_date" placeholder="dd/mm/yyyy">
                   </div>
-                  
-                  <button type="submit" class="btn-submit">Submit Quote Request</button>
-              </form>
-          </div>
+              </div>
+              
+              <div class="form-group">
+                  <label for="venue">Venue (if known)</label>
+                  <input type="text" id="venue" name="venue" placeholder="Enter venue name or location">
+              </div>
+              
+              <div class="form-group">
+                  <label for="additional_info">Additional Information</label>
+                  <textarea id="additional_info" name="additional_info" rows="4" placeholder="Tell us more about your vision, specific requirements, or any questions..."></textarea>
+              </div>
+              
+              <button type="submit" class="btn-submit">Submit Quote Request</button>
+          </form>
       </div>
-  </section>
+  </div>
 
     Contact Section  
   <section id="contact" class="contact-section">
@@ -602,7 +705,7 @@
           <p class="cta-subtitle">Let us bring your vision to life with our expertise and attention to detail</p>
           <div class="cta-buttons">
               <button class="btn-start-planning" onclick="scrollToContact()">Start Planning</button>
-              <button class="btn-get-quote" onclick="scrollToQuote()">Get Quote</button>
+              <button class="btn-get-quote" onclick="openQuoteModal()">Get Quote</button>
           </div>
       </div>
   </section>
