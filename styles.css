@@ -346,7 +346,7 @@ body {
 
 .services-header h2 {
   font-family: "Cinzel", serif;
-  font-size: 3rem;
+  font-size: 2.7rem; /* Updated */
   color: #333;
   margin-bottom: 20px;
   position: relative;
@@ -393,7 +393,7 @@ body {
 
 .service-image {
   position: relative;
-  height: 250px;
+  height: 220px; /* Updated */
   overflow: hidden;
 }
 
@@ -425,12 +425,12 @@ body {
 }
 
 .service-content {
-  padding: 30px;
+  padding: 25px; /* Updated */
 }
 
 .service-content h3 {
   font-family: "Cinzel", serif;
-  font-size: 1.35rem;
+  font-size: 1.25rem; /* Updated */
   color: #333;
   margin-bottom: 15px;
 }
@@ -532,7 +532,7 @@ body {
 
 .video-header h2 {
   font-family: "Cinzel", serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem; /* Updated */
   color: #333;
   margin-bottom: 15px;
   position: relative;
@@ -560,7 +560,7 @@ body {
   position: relative;
   background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
   border-radius: 15px;
-  padding: 30px;
+  padding: 25px; /* Updated */
   border: 1px solid #d4af37;
 }
 
@@ -571,6 +571,7 @@ body {
 .main-video iframe {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 420px; /* Updated */
 }
 
 .video-info {
@@ -705,7 +706,7 @@ body {
 
 .gallery-image-wrapper img {
   width: 100%;
-  height: 280px;
+  height: 250px; /* Updated */
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -735,7 +736,7 @@ body {
 }
 
 .gallery-overlay h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem; /* Updated */
   margin-bottom: 8px;
   font-family: "Cinzel", serif;
   color: #d4af37;
@@ -934,7 +935,6 @@ body {
 .btn-submit:hover {
   background: linear-gradient(135deg, #b8941f 0%, #d4af37 100%);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 /* Contact Section */
@@ -950,7 +950,7 @@ body {
 
 .contact-title {
   font-family: "Great Vibes", cursive;
-  font-size: 4rem;
+  font-size: 3.5rem; /* Updated */
   color: #d4af37;
   margin-bottom: 20px;
   font-weight: 400;
@@ -972,7 +972,7 @@ body {
 
 .contact-info h3 {
   font-family: "Cinzel", serif;
-  font-size: 2rem;
+  font-size: 1.8rem; /* Updated */
   color: #333;
   margin-bottom: 15px;
 }
@@ -996,14 +996,14 @@ body {
 }
 
 .contact-icon {
-  width: 50px;
-  height: 50px;
+  width: 45px; /* Updated */
+  height: 45px; /* Updated */
   background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   flex-shrink: 0;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
@@ -1044,7 +1044,7 @@ body {
 
 .contact-form-wrapper {
   background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-  padding: 40px;
+  padding: 35px; /* Updated */
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   border: 1px solid #d4af37;
@@ -1052,7 +1052,7 @@ body {
 
 .contact-form-wrapper h3 {
   font-family: "Cinzel", serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem; /* Updated */
   color: #333;
   margin-bottom: 30px;
   text-align: center;
@@ -1439,8 +1439,8 @@ body {
   margin: 5% auto;
   padding: 0;
   border-radius: 20px;
-  width: 90%;
-  max-width: 800px;
+  width: 85%; /* Updated */
+  max-width: 750px; /* Updated */
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -1470,7 +1470,7 @@ body {
 
 .modal-header h2 {
   font-family: "Cinzel", serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem; /* Updated */
   color: #000;
   margin: 0;
 }
@@ -1603,169 +1603,34 @@ body {
   .modal .communication-options {
     grid-template-columns: 1fr;
   }
-}
-
-/* Responsive Design for New Sections */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .slide-title {
-    font-size: 3rem;
-  }
-
-  .slide-subtitle {
-    font-size: 2rem;
-  }
-
-  .slide-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
 
   .services-header h2 {
-    font-size: 2.2rem;
+    font-size: 2rem; /* Updated */
   }
 
   .video-header h2 {
-    font-size: 2rem;
-  }
-
-  .carousel-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .prev-btn {
-    left: 15px;
-  }
-
-  .next-btn {
-    right: 15px;
-  }
-
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    font-size: 1.8rem; /* Updated */
   }
 
   .contact-title {
-    font-size: 3rem;
+    font-size: 2.8rem; /* Updated */
   }
 
-  .communication-options {
-    grid-template-columns: 1fr;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .quote-form-container {
-    margin: 0 20px;
-    padding: 30px 20px; /* Adjust padding for smaller screens */
-  }
-
-  .contact-form-wrapper {
-    padding: 30px 20px;
-  }
-
-  .cta-title {
-    font-size: 3rem;
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .btn-start-planning,
-  .btn-get-quote {
-    width: 250px;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer-bottom-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-bottom-links {
-    justify-content: center;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
+  .main-video iframe {
+    height: 350px; /* Updated */
   }
 }
 
 @media (max-width: 480px) {
-  .slide-title {
-    font-size: 2.5rem;
-  }
-
-  .slide-subtitle {
-    font-size: 1.8rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .video-thumbnails {
-    justify-content: center;
-  }
-
-  .thumbnail {
-    width: 100px;
-    height: 70px;
-  }
-
-  .quote-header h2 {
-    font-size: 2.2rem;
+  .services-header h2 {
+    font-size: 1.8rem; /* Updated */
   }
 
   .contact-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Updated */
   }
 
-  .cta-title {
-    font-size: 2.5rem;
-  }
-
-  .footer {
-    padding: 60px 0 0;
-  }
-
-  .footer-content {
-    gap: 30px;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
-    border-radius: 10px;
-  }
-
-  .newsletter-form input,
-  .newsletter-form button {
-    border-radius: 10px;
-  }
-
-  .newsletter-form button {
-    margin-top: 10px;
+  .main-video iframe {
+    height: 280px; /* Updated */
   }
 }
