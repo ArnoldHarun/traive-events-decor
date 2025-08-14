@@ -111,29 +111,67 @@ function filterGallery(category) {
   })
 }
 
-// Scroll to contact section
-function scrollToContact() {
-  const contactSection = document.getElementById("contact")
-  if (contactSection) {
-    contactSection.scrollIntoView({
+// Scroll to gallery section
+function scrollToGallery() {
+  const gallerySection = document.getElementById("gallery")
+  if (gallerySection) {
+    gallerySection.scrollIntoView({
       behavior: "smooth",
       block: "start",
     })
   }
 }
 
-// Scroll to quote section
-function scrollToQuote() {
-  const quoteSection = document.getElementById("quote")
-  if (quoteSection) {
-    quoteSection.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    })
+// Quote modal functionality
+function openQuoteModal() {
+  const modal = document.getElementById("quoteModal")
+  if (modal) {
+    modal.style.display = "block"
+    document.body.style.overflow = "hidden" // Prevent background scrolling
   }
 }
 
-// Quote form validation (simplified for single step)
+function closeQuoteModal() {
+  const modal = document.getElementById("quoteModal")
+  if (modal) {
+    modal.style.display = "none"
+    document.body.style.overflow = "auto" // Restore background scrolling
+
+    // Reset form
+    const form = document.getElementById("quoteForm")
+    if (form) {
+      form.reset()
+      // Remove any error messages
+      const errorMsg = form.querySelector(".error-message")
+      if (errorMsg) {
+        errorMsg.remove()
+      }
+      // Reset field styles
+      const fields = form.querySelectorAll("input, select, textarea")
+      fields.forEach((field) => {
+        field.style.borderColor = "#e9ecef"
+        field.style.boxShadow = "none"
+      })
+    }
+  }
+}
+
+// Close modal when clicking outside of it
+window.onclick = (event) => {
+  const modal = document.getElementById("quoteModal")
+  if (event.target === modal) {
+    closeQuoteModal()
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeQuoteModal()
+  }
+})
+
+// Quote form validation (for modal)
 function validateQuoteForm() {
   const quoteForm = document.getElementById("quoteForm")
   if (!quoteForm) {
@@ -404,7 +442,7 @@ function showNotification(message, type = "info") {
 
 // Form submission handlers
 function initFormHandlers() {
-  // Quote form submission
+  // Quote form submission (modal)
   const quoteForm = document.getElementById("quoteForm")
   if (quoteForm) {
     quoteForm.addEventListener("submit", (e) => {
@@ -430,7 +468,7 @@ function initFormHandlers() {
                 "Thank you! Your quote request has been sent successfully. We'll get back to you soon.",
                 "success",
               )
-              quoteForm.reset()
+              closeQuoteModal() // Close modal on success
             } else {
               showNotification("Sorry, there was an error sending your request. Please try again.", "error")
             }
@@ -447,7 +485,7 @@ function initFormHandlers() {
     })
   }
 
-  // Contact form submission
+  // Contact form submission (unchanged)
   const contactForm = document.getElementById("contactForm")
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
